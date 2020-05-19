@@ -1,7 +1,9 @@
 <template>
-    <v-app>
+    <div>
+        <Button style="margin: 23px" />
+        <Setting style="float: right; margin-top: -59px; margin-right: 52px;" />
         <v-container style="border: 1px solid; margin-top: 45px;">
-            <v-simple-table style="border: 1px solid;">
+            <v-simple-table style="border: 1px solid; text-align: center">
                 <template v-slot:default>
                 <thead>
                     <tr>
@@ -22,9 +24,13 @@
                 </template>
             </v-simple-table>
         </v-container>
-    </v-app>
+        <List />
+    </div>
 </template>
 <script>
+import Button from '../components/Button'
+import Setting from '../components/Setting'
+import List from '../components/list'
   export default {
     data () {
       return {
@@ -50,6 +56,11 @@
         ],
       }
     },
+    components: {
+      Button,
+      Setting,
+      List
+    }
   }
 </script>
 <style scoped>
@@ -59,5 +70,9 @@
   tr th {
       border: 1px solid;
       background: rgb(56, 218, 42);
+  }
+  .wrapper {
+    border: 1px solid;
+    position: absolute;
   }
 </style>>
